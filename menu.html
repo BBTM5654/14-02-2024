@@ -17,7 +17,6 @@ body{
   min-height:100vh;
 }
 
-/* decoraciones */
 body::before{
   content:"";
   position:absolute;
@@ -39,7 +38,6 @@ body::after{
   border-radius:100% 0 0 0;
 }
 
-/* From Uiverse.io by gharsh11032000 */
 .tooltip-container{
   --background:#ffdb4d;
   --color:#333;
@@ -52,29 +50,38 @@ body::after{
   text-align:center;
   border:2px solid #333;
 }
-button{
-  background:none;
-  border:none;
-  font-size:16px;
-  font-weight:bold;
-}
 </style>
 </head>
 <body>
 
 <h2>Revisa las hojas (contraseña)</h2>
 
-<div onclick="acceso('pagina1.html')" class="tooltip-container">Todo lo que no se decir</div>
-<div onclick="acceso('pagina2.html')" class="tooltip-container">Quedarse</div>
-<div onclick="acceso('pagina3.html')" class="tooltip-container">Presencia</div>
-<div onclick="acceso('pagina4.html')" class="tooltip-container">Otro ritmo</div>
-<div onclick="acceso('pagina5.html')" class="tooltip-container">Todo encaja</div>
+<div onclick="acceso('pagina1.html','oztia')" class="tooltip-container">
+Todo lo que no se decir
+</div>
+
+<div onclick="acceso('pagina2.html','bee')" class="tooltip-container">
+Quedarse
+</div>
+
+<div onclick="acceso('pagina3.html','quiereseso')" class="tooltip-container">
+Presencia
+</div>
+
+<div onclick="acceso('pagina4.html','cinna:3')" class="tooltip-container">
+Otro ritmo
+</div>
+
+<div onclick="acceso('pagina5.html','romantic_sunday')" class="tooltip-container">
+Todo encaja
+</div>
 
 <script>
-function acceso(pagina){
+function acceso(pagina, claveCorrecta){
   let clave = prompt("Ingresa la contraseña:");
-  if(clave==="holacomoestas"){
-    window.location.href=pagina;
+  
+  if(clave === claveCorrecta){
+    window.location.href = pagina;
   }else{
     alert("Contraseña incorrecta");
   }
@@ -83,8 +90,3 @@ function acceso(pagina){
 
 </body>
 </html>
-
-
-
-
-
