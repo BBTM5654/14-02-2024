@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menú</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial;
+  background:#fff6b3;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  min-height:100vh;
+}
+
+/* decoraciones */
+body::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:120px;
+  height:120px;
+  background:#fff0a0;
+  border-radius:0 0 100% 0;
+}
+body::after{
+  content:"";
+  position:absolute;
+  bottom:0;
+  right:0;
+  width:120px;
+  height:120px;
+  background:#fff0a0;
+  border-radius:100% 0 0 0;
+}
+
+/* From Uiverse.io by gharsh11032000 */
+.tooltip-container{
+  --background:#ffdb4d;
+  --color:#333;
+  margin:15px;
+  cursor:pointer;
+  font-weight:600;
+  padding:1em;
+  border-radius:10px;
+  width:220px;
+  text-align:center;
+  border:2px solid #333;
+}
+button{
+  background:none;
+  border:none;
+  font-size:16px;
+  font-weight:bold;
+}
+</style>
+</head>
+<body>
+
+<h2>Menú</h2>
+
+<div onclick="acceso('pagina1.html')" class="tooltip-container">Opción 1</div>
+<div onclick="acceso('pagina2.html')" class="tooltip-container">Opción 2</div>
+<div onclick="acceso('pagina3.html')" class="tooltip-container">Opción 3</div>
+<div onclick="acceso('pagina4.html')" class="tooltip-container">Opción 4</div>
+<div onclick="acceso('pagina5.html')" class="tooltip-container">Opción 5</div>
+
+<script>
+function acceso(pagina){
+  let clave = prompt("Ingresa la contraseña:");
+  if(clave==="holacomoestas"){
+    window.location.href=pagina;
+  }else{
+    alert("Contraseña incorrecta");
+  }
+}
+</script>
+
+</body>
+</html>
